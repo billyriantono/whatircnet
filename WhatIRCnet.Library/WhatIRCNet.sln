@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IrcDotNet", "..\IrcDotNet\IrcDotNet\IrcDotNet.csproj", "{47D551DA-96ED-4EF6-96BF-4832059D4700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsAppApi", "..\WhatsAPINet\WhatsAppApi\WhatsAppApi.csproj", "{3FC9096A-C4D2-40C7-BE7B-D98ACAB3BD2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsIRCNet.Library", "WhatsIRCNet.Library\WhatsIRCNet.Library.csproj", "{76F80489-B181-4A6D-A113-2965D23286E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47D551DA-96ED-4EF6-96BF-4832059D4700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D551DA-96ED-4EF6-96BF-4832059D4700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D551DA-96ED-4EF6-96BF-4832059D4700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D551DA-96ED-4EF6-96BF-4832059D4700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC9096A-C4D2-40C7-BE7B-D98ACAB3BD2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC9096A-C4D2-40C7-BE7B-D98ACAB3BD2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC9096A-C4D2-40C7-BE7B-D98ACAB3BD2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC9096A-C4D2-40C7-BE7B-D98ACAB3BD2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F80489-B181-4A6D-A113-2965D23286E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F80489-B181-4A6D-A113-2965D23286E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F80489-B181-4A6D-A113-2965D23286E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F80489-B181-4A6D-A113-2965D23286E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
