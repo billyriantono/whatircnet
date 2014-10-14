@@ -32,10 +32,17 @@ namespace WhatsIRCNet.Library
 
         }
 
-        public void SetAdminBot(List<string> adminNick)
+        public override void SetAdminBot(List<string> adminNick)
         {
             this._ircAdminNickName = adminNick;
         }
+
+        public override void SetWhatsAppTarget(string target)
+        {
+            this._whatsAppTarget = target;
+        }
+
+        private string _whatsAppTarget;
 
         public override IrcRegistrationInfo RegistrationInfo
         {
@@ -72,10 +79,20 @@ namespace WhatsIRCNet.Library
                 return whatsAppClient;
             }
         }
+
+        private bool whatsAppConnected = false;
+
+        public override bool WhatsAppConnected
+        {
+            get
+            {
+                return whatsAppConnected;
+            }
+        }
         /*
          * Constructor for Bot
          */
-        public WhatsIrcClient(string whatsAppNumber, string whatsappPassword, string ircServer, string ircUsername, string ircPassword, List<string> joinChannel)
+        public WhatsIrcClient(string whatsAppNumber, string whatsappPassword, string ircServer, string ircUsername, string ircPassword, List<string> joinChannel,List<string> admin)
         {
             this._whatsappNumber = whatsAppNumber;
             this._whatsappPassword = whatsappPassword;
@@ -83,11 +100,21 @@ namespace WhatsIRCNet.Library
             this._ircUserName = ircUsername;
             this._ircUserPassword = ircPassword;
             this._joinChannelList = joinChannel;
+            this.SetAdminBot(admin);
 
             if (whatsAppClient == null)
             {
                 whatsAppClient = new WhatsAppApi.WhatsApp(this._whatsappNumber, this._whatsappPassword, "");
             }
+
+            whatsAppClient.Connect();
+            whatsAppClient.Login();
+
+            if (whatsAppClient.ConnectionStatus == WhatsAppApi.ApiBase.CONNECTION_STATUS.CONNECTED)
+            {
+                whatsAppConnected = true;
+            }
+            
         }
 
         protected override void OnClientConnect(IrcClient client)
@@ -152,6 +179,20 @@ namespace WhatsIRCNet.Library
         protected override void InitializeCommandProcessors()
         {
             base.InitializeCommandProcessors();
+        }
+
+        private void SendMessageOnWhatsApp(IrcMessageEventArgs e)
+        {
+            whatsAppClient.SendMessage(_whatsAppTarget, String.Format("[{0}] - {1}",e.Source.Name,e.Text)); 
+        }
+
+        private void SendFromWhatsAppToIrc(IrcLocalUser localUser,string msg)
+        {
+            foreach( var item in localUser.GetChannelUsers()){
+                IrcChannel channel = item.Channel;
+                localUser.SendMessage(channel, msg);
+            }
+            
         }
         #endregion
 

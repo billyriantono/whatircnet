@@ -51,6 +51,15 @@ namespace WhatsIRCNet.Library.Common
         {
             get { return null; }
         }
+
+        private bool whatsAppConnected;
+        public virtual bool WhatsAppConnected
+        {
+            get
+            {
+                return whatsAppConnected;
+            }
+        }
         protected IDictionary<string, ChatCommandProcessor> ChatCommandProcessors
         {
             get { return this.chatCommandProcessors; }
@@ -110,6 +119,10 @@ namespace WhatsIRCNet.Library.Common
             this.isRunning = false;
         }
         protected abstract void InitializeCommandProcessors();
+
+        public abstract void SetWhatsAppTarget(string target);
+        public abstract void SetAdminBot(List<string> admin);
+
         private void ReadCommand(string command, IList<string> parameters)
         {
             CommandProcessor processor;

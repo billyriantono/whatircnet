@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>bd86a4c8-fc03-4638-939b-72e3532b3eae</ProjectGuid>
+    <ProjectGuid>{0823E982-E203-460F-BBD4-1248EFD2E560}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WhatsApiNet.Bot</RootNamespace>
@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WhatsIRCNet.Library\WhatsIRCNet.Library.csproj">
+      <Project>{76f80489-b181-4a6d-a113-2965d23286e2}</Project>
+      <Name>WhatsIRCNet.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

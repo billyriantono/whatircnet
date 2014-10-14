@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsAppApi", "..\WhatsAPIN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsIRCNet.Library", "WhatsIRCNet.Library\WhatsIRCNet.Library.csproj", "{76F80489-B181-4A6D-A113-2965D23286E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsApiNet.Bot", "WhatsApiNet.Bot\WhatsApiNet.Bot.csproj", "{0823E982-E203-460F-BBD4-1248EFD2E560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IrcDotNet.Common", "..\IrcDotNet\IrcDotNet.Common\IrcDotNet.Common.csproj", "{9138300E-94C6-4F79-999F-6830FA76488E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{76F80489-B181-4A6D-A113-2965D23286E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76F80489-B181-4A6D-A113-2965D23286E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76F80489-B181-4A6D-A113-2965D23286E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0823E982-E203-460F-BBD4-1248EFD2E560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0823E982-E203-460F-BBD4-1248EFD2E560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0823E982-E203-460F-BBD4-1248EFD2E560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0823E982-E203-460F-BBD4-1248EFD2E560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9138300E-94C6-4F79-999F-6830FA76488E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9138300E-94C6-4F79-999F-6830FA76488E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9138300E-94C6-4F79-999F-6830FA76488E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9138300E-94C6-4F79-999F-6830FA76488E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
